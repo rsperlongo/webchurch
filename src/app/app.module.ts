@@ -17,6 +17,7 @@ import {MatDividerModule} from '@angular/material/divider';
 import { MembersComponent } from './members/members.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import {MatMenuModule} from '@angular/material/menu';
+import { CardsComponent } from './dashboard/cards/cards.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import {MatMenuModule} from '@angular/material/menu';
     DashboardComponent,
     MembersComponent,
     FooterComponent,
+    CardsComponent,
   ],
   imports: [
     BrowserModule,
