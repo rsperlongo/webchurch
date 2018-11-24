@@ -19,6 +19,7 @@ import { FooterComponent } from './layout/footer/footer.component';
 import {MatMenuModule} from '@angular/material/menu';
 import { CardsComponent } from './dashboard/cards/cards.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MembersComponent,
     FooterComponent,
     CardsComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
