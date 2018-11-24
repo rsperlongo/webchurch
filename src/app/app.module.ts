@@ -18,6 +18,7 @@ import { MembersComponent } from './members/members.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import {MatMenuModule} from '@angular/material/menu';
 import { CardsComponent } from './dashboard/cards/cards.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { CardsComponent } from './dashboard/cards/cards.component';
     MatExpansionModule,
     MatListModule,
     MatDividerModule,
-    MatMenuModule
+    MatMenuModule,
+    MatCheckboxModule
   ],
   exports: [
     MatIconModule,
@@ -48,7 +50,8 @@ import { CardsComponent } from './dashboard/cards/cards.component';
     MatExpansionModule,
     MatListModule,
     MatDividerModule,
-    MatMenuModule
+    MatMenuModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

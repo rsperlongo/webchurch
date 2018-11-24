@@ -9,6 +9,8 @@ import { MatSidenav } from '@angular/material/sidenav';
 export class DashboardComponent implements OnInit {
   @ViewChild('sidenav') sidenav: MatSidenav;
 
+  disabled = false;
+
   constructor() { }
 
   ngOnInit() {
