@@ -1,3 +1,27 @@
-<p>
-  login works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+        <mat-card>
+          <div class="col-md-12">
+              <mat-card-header>
+                  <mat-card-title>Login - WebChurch</mat-card-title>
+                </mat-card-header>
+          </div>
+          <div class="col-md-12">
+              <mat-card-content>
+                  <mat-form-field>
+                    <input type="text" matInput placeholder="Email">
+                  </mat-form-field>
+                  <br>
+                  <mat-form-field>
+                    <input #input type="password" maxlength="8" matInput placeholder="Senha">
+                    <mat-hint aling="end">{{input.value?.lenght || 0}}</mat-hint>
+                  </mat-form-field>
+                </mat-card-content>
+          </div>
+          </mat-card>
+
+    </div>
+
+  </div>
+</div>
