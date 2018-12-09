@@ -10,14 +10,21 @@
           <div class="col-md-12">
               <mat-card-content>
                   <mat-form-field>
-                    <input type="text" matInput placeholder="Email">
+                    <input type="text" matInput placeholder="Email" [formControl]="email" required>
+                    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
                   </mat-form-field>
                   <br>
+                  <br>
                   <mat-form-field>
-                    <input #input type="password" maxlength="8" matInput placeholder="Senha">
-                    <mat-hint aling="end">{{input.value?.lenght || 0}}</mat-hint>
+                    <input #input type="password" maxlength="8" matInput placeholder="Senha" [type]="hide ? 'password': 'text'">
+                    <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    <mat-hint align="end">{{input.value?.lenght || 0}}</mat-hint>
                   </mat-form-field>
-                </mat-card-content>
+              </mat-card-content>
+              <mat-card-footer>
+                <button type="submit" class="btn btn-info  btn-block"><mat-icon>exit_to_app</mat-icon>ENTRAR</button>
+
+              </mat-card-footer>
           </div>
           </mat-card>
 
