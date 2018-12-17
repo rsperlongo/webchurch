@@ -20,14 +20,20 @@ router.get('/:id', function(req, res, next) {
     res.json(post);
   });
 });
-
-router.post('/', function(req, res, next) {
+ router.post('/', function(req, res, next) {
   Members.create(req.body, function(err, post) {
     res.json(post);
   });
 });
 
-router.delete('/:id', function(req, res, next) {
+router.put('/:id', function(req, res, next) {
+  Members.findByIdAndUpdate(req.params.id, req.body, function(err, post) {
+    if (err) return next(err);
+    res.json(post);
+  });
+});
+
+ router.delete('/:id', function(req, res, next) {
   Members.findByIdAndRemove(req.params.id, req.body, function(err, post) {
     if(err) return next(err);
     res.json(post)
