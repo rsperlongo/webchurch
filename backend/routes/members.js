@@ -4,6 +4,10 @@ const mongoose = require('mongoose');
 const Members = ('../models/Members.js');
 
 router.get('/', function(req, res, next) {
+  res.send('Express RESTful API');
+});
+
+ router.get('/', function(req, res, next) {
   Members.find(function(err, members) {
     if(err) return next(err);
     res.json(members);
